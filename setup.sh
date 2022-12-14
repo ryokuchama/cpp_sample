@@ -5,4 +5,5 @@ unzip CRYPTOPP_8_7_0.zip
 rm -rf CRYPTOPP_8_7_0.zip
 cd cryptopp-CRYPTOPP_8_7_0
 make
-make install
+mkdir deps
+make DESTDIR=$(pwd)/deps install
