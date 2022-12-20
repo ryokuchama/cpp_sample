@@ -10,7 +10,9 @@ REQUIRED)
 
 add_subdirectory(src)
 target_link_libraries(${PROJECT_NAME} PUBLIC ${CRYPTO})
-target_include_directories(${PROJECT_NAME} PUBLIC ${DEPEND_LIB_ROOT}/include)
+target_include_directories(${PROJECT_NAME} PUBLIC 
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/cryptopp-CRYPTOPP_8_7_0/deps/usr/local/include/cryptopp)
 
 if(TESTING)
     add_subdirectory(test)
